@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+    android:layout_width="300sp"
+    android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:background="@color/ultra_light_white">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/califica_el_plato"
+            android:gravity="center"
+            android:textSize="@dimen/Text_Dimens_H4"
+            android:layout_margin="20sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="@dimen/Text_Dimens_H2.5"
+            android:text="@string/presentacion"/>
+        <RatingBar
+            android:id="@+id/RB_Rating_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:layout_gravity="center_horizontal"
+            android:stepSize="0.5"
+            android:layout_marginBottom="10sp"
+            android:rating="4" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="@dimen/Text_Dimens_H2.5"
+            android:text="@string/tiempo_de_entrega"/>
+        <RatingBar
+            android:id="@+id/RB_Rating_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:layout_gravity="center_horizontal"
+            android:stepSize="0.5"
+            android:layout_marginBottom="10sp"
+            android:rating="4" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="@dimen/Text_Dimens_H2.5"
+            android:text="@string/sabor"/>
+        <RatingBar
+            android:id="@+id/RB_Rating_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:layout_gravity="center_horizontal"
+            android:stepSize="0.5"
+            android:layout_marginBottom="10sp"
+            android:rating="4" />
+
+        <Button
+            android:id="@+id/BT_Enviar"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginRight="20sp"
+            android:layout_marginLeft="20sp"
+            android:background="@drawable/purple_rounded_frame"
+            android:text="@string/enviar"/>
+
+        <Button
+            android:id="@+id/BT_Cancelar"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_margin="20sp"
+            android:background="@drawable/gray_rounded_frame"
+            android:text="@string/cancelar"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

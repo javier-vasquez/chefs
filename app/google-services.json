@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "945432912004",
+    "firebase_url": "https://chefs-e1579.firebaseio.com",
+    "project_id": "chefs-e1579",
+    "storage_bucket": "chefs-e1579.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:945432912004:android:765a04076e3d02f9",
+        "android_client_info": {
+          "package_name": "com.javiervasquez.chefs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "945432912004-n4va41lf7f1cagidg79jbv7st7p3c24k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCicX6NP0Nj-aEk3dsv7HrvvSafamH2je4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

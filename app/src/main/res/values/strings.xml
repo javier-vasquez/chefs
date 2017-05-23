@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Chefs!</string>
+    <string name="usuario">Usuario</string>
+    <string name="email">Email</string>
+    <string name="contrasena">Contrasena</string>
+    <string name="registrate">Registrate</string>
+    <string name="iniciar_sesion">Iniciar Sesion</string>
+    <string name="auth_failed">Fallo la autenticacion, intenta de nuevo</string>
+    <string name="fallo_el_registro_intente_de_nuevo">Fallo el registro, intente de nuevo mas tarde</string>
+    <string name="debes_completar_los_campos">Debes completrar todos los campos</string>
+    <string name="cerrar_sesion">Cerrar Sesion</string>
+    <string name="nombre">Nombres y Apellidos</string>
+    <string name="cedula">Cedula</string>
+    <string name="documento_identidad">Documento de identidad</string>
+    <string name="repetir_contrasena">Repetir Contrasena</string>
+    <string name="tus_platos">Tus Platos</string>
+    <string name="solicitudes">Solicitudes</string>
+    <string name="chef">Chef</string>
+    <string name="cargando">Cargando...</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nuevo_plato">Nuevo Plato</string>
+    <string name="nombre_plato">Nombre del plato</string>
+    <string name="descripcion">Descripcion</string>
+    <string name="ingredientes">Ingredientes</string>
+    <string name="fecha">Fecha</string>
+    <string name="hora">Hora</string>
+    <string name="cantidad">Cantidad</string>
+    <string name="solicitudes_activas">Solicitudes Activas</string>
+    <string name="precio">Precio</string>
+    <string name="comprar">Comprar</string>
+    <string name="platos">Platos</string>
+    <string name="mis_solicitudes_activas">Mis Solicitudes Activas</string>
+    <string name="despachar">Despachar</string>
+    <string name="despachado">Despachado</string>
+    <string name="calificar">Calificar</string>
+    <string name="califica_el_plato">Califica tu plato</string>
+    <string name="presentacion">Presentacion</string>
+    <string name="tiempo_de_entrega">Tiempo de entrega</string>
+    <string name="enviar">Enviar</string>
+    <string name="sabor">Sabor</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="direccion">Direccion de Residencia</string>
+    <string name="celular">Celular</string>
+    <string name="escuela_gastronomica">Escuela Gastronomica</string>
+    <string name="cuenta_ahorros">Numero de cuenta de Ahorros</string>
+    <string name="banco">Nombre banco</string>
+</resources>
