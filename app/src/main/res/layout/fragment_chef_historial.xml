@@ -1,0 +1,26 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60sp"
+            android:gravity="center"
+            android:text="@string/historial"
+            android:textSize="@dimen/Text_Dimens_H3"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/ultra_light_white"/>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/RV_Platos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+
+</FrameLayout>

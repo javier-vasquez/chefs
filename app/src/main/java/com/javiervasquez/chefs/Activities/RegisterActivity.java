@@ -118,10 +118,15 @@ public class RegisterActivity extends AppCompatActivity {
                                     String phone = ET_Phone.getText().toString().trim();
 
 
+
                                     String school = "";
+                                    String cuenta = "";
+                                    String banco = "";
 
                                     if(RB_Chef.isChecked()) {
                                         school = ET_Escuela_Gastronomica.getText().toString().trim();
+                                        cuenta = ET_Cuenta_Ahorros.getText().toString().trim();
+                                        banco = ET_Banco.getText().toString().trim();
                                     }
 
 
@@ -136,6 +141,8 @@ public class RegisterActivity extends AppCompatActivity {
                                         new_user.setPhone(phone);
                                         if(RB_Chef.isChecked()) {
                                             new_user.setSchool(school);
+                                            new_user.setBankAccount(cuenta);
+                                            new_user.setBankName(banco);
                                         }
                                         new_user.setChef(RB_Chef.isChecked());
 

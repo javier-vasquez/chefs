@@ -1,6 +1,7 @@
 package com.javiervasquez.chefs.Fragments;
 
 
+import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -9,6 +10,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.res.ResourcesCompat;
+import android.support.v4.app.NotificationCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -17,6 +19,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -32,6 +35,8 @@ import com.javiervasquez.chefs.R;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import static android.content.Context.NOTIFICATION_SERVICE;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -66,6 +71,42 @@ public class ChefSolicitudesActivasFragment extends Fragment {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference dish = database.getReference("Dish/bought/");
         Query queryRef = dish.orderByChild("chef_id").equalTo(sharedPref.getString("user_id",""));
+        queryRef.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                NotificationCompat.Builder mBuilder =
+                        new NotificationCompat.Builder(context)
+                                .setSmallIcon(R.drawable.chefs_logo_2)
+                                .setContentTitle("Tienes un nuevo comprador")
+                                .setContentText("Ingresa para ver");
+                int mNotificationId = 001;
+                NotificationManager mNotifyMgr =
+                        (NotificationManager) context.getSystemService(NOTIFICATION_SERVICE);
+                mNotifyMgr.notify(mNotificationId, mBuilder.build());
+            }
+
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+
 
         RecyclerView recycler = (RecyclerView) view.findViewById(R.id.RV_Platos);
         recycler.setHasFixedSize(false);
@@ -109,6 +150,20 @@ public class ChefSolicitudesActivasFragment extends Fragment {
                     platoHolder.getBT_Comprar().setBackgroundResource(R.drawable.gray_rounded_frame);
                     platoHolder.getBT_Comprar().setVisibility(View.VISIBLE);
                 }
+
+                platoHolder.getCV_Item().setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Fragment fragment = new PlatoDetallesFragment();
+                        Bundle b = new Bundle();
+                        b.putString("plato_id",plato.getId());
+                        fragment.setArguments(b);
+                        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                        transaction.replace(R.id.container, fragment);
+                        transaction.addToBackStack(null);
+                        transaction.commitAllowingStateLoss();
+                    }
+                });
             }
         };
         recycler.setAdapter(adapter);

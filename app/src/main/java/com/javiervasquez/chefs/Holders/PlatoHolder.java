@@ -25,6 +25,7 @@ public class PlatoHolder extends RecyclerView.ViewHolder {
     private TextView TV_Fecha_y_Hora;
     private TextView TV_Cantidad;
     private TextView TV_Precio;
+    private TextView TV_Score;
     private Button BT_Comprar;
 
     public PlatoHolder(View itemView) {
@@ -38,10 +39,14 @@ public class PlatoHolder extends RecyclerView.ViewHolder {
         TV_Fecha_y_Hora = (TextView) itemView.findViewById(R.id.TV_Fecha_y_Hora);
         TV_Cantidad = (TextView) itemView.findViewById(R.id.TV_Cantidad);
         TV_Precio = (TextView) itemView.findViewById(R.id.TV_Precio);
+        TV_Score = (TextView) itemView.findViewById(R.id.TV_Score);
         BT_Comprar = (Button) itemView.findViewById(R.id.BT_Comprar);
 
     }
 
+    public TextView getTV_Score() {
+        return TV_Score;
+    }
 
     public Button getBT_Comprar() {
         return BT_Comprar;

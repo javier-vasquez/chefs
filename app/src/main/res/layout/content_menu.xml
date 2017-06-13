@@ -8,38 +8,27 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_margin="15sp"
-        android:paddingTop="20sp"
-        android:paddingLeft="10sp">
-        <FrameLayout
-            android:layout_width="70sp"
-            android:layout_height="70sp">
-            <ImageView
-                android:id="@+id/IV_User_Photo"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-        </FrameLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:orientation="vertical"
-            android:layout_marginLeft="5sp">
+        android:orientation="vertical"
+        android:paddingRight="20sp"
+        android:paddingLeft="20sp"
+        android:paddingTop="40sp"
+        android:paddingBottom="40sp"
+        android:background="@color/ultra_light_white">
             <TextView
                 android:id="@+id/TV_Username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/white"
-                android:textSize="@dimen/Text_Dimens_H2"
-                android:textStyle="bold"/>
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/Text_Dimens_H5"
+                android:textStyle="bold"
+                android:text="@string/cargando"/>
             <TextView
-                android:id="@+id/TV_User_Id"
+                android:id="@+id/TV_Score"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/Text_Dimens_H2"
-                android:textColor="@android:color/white"/>
-        </LinearLayout>
+                android:textSize="@dimen/Text_Dimens_H2.5"
+                android:text="@string/que_deseas_hoy"
+                android:textColor="@color/colorPrimaryDark"/>
 
     </LinearLayout>
     <ScrollView
@@ -54,6 +43,8 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1sp"
+                android:layout_marginBottom="10sp"
+                android:layout_marginTop="30sp"
                 android:background="@color/ultra_light_white"
                 android:layout_marginRight="20sp"/>
 
@@ -61,7 +52,7 @@
                 android:id="@+id/BT_Tus_Platos"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:visibility="visible"
                 android:padding="10sp">
                 <!--<ImageView-->
@@ -78,13 +69,20 @@
                     android:textColor="@color/ultra_light_white"
                     android:textSize="@dimen/Text_Dimens_H2.5"
                     android:layout_marginLeft="10sp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1sp"
+                    android:layout_marginBottom="10sp"
+                    android:layout_marginTop="10sp"
+                    android:background="@color/ultra_light_white"
+                    android:layout_marginRight="20sp"/>
             </LinearLayout>
 
             <LinearLayout
             android:id="@+id/BT_Solicitudes_Activas"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:padding="10sp">
             <!--<ImageView-->
             <!--android:layout_width="40sp"-->
@@ -100,12 +98,20 @@
                 android:textColor="@color/ultra_light_white"
                 android:textSize="@dimen/Text_Dimens_H2.5"
                 android:layout_marginLeft="10sp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1sp"
+                    android:layout_marginBottom="10sp"
+                    android:layout_marginTop="10sp"
+                    android:background="@color/ultra_light_white"
+                    android:layout_marginRight="20sp"/>
         </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/BT_User_Solicitudes_Activas"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:padding="10sp">
                 <!--<ImageView-->
                 <!--android:layout_width="40sp"-->
@@ -121,12 +127,20 @@
                     android:textColor="@color/ultra_light_white"
                     android:textSize="@dimen/Text_Dimens_H2.5"
                     android:layout_marginLeft="10sp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1sp"
+                    android:layout_marginBottom="10sp"
+                    android:layout_marginTop="10sp"
+                    android:background="@color/ultra_light_white"
+                    android:layout_marginRight="20sp"/>
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/BT_Platos"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:padding="10sp">
                 <!--<ImageView-->
                 <!--android:layout_width="40sp"-->
@@ -142,13 +156,76 @@
                     android:textColor="@color/ultra_light_white"
                     android:textSize="@dimen/Text_Dimens_H2.5"
                     android:layout_marginLeft="10sp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1sp"
+                    android:layout_marginBottom="10sp"
+                    android:layout_marginTop="10sp"
+                    android:background="@color/ultra_light_white"
+                    android:layout_marginRight="20sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/BT_Historial"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10sp">
+                <!--<ImageView-->
+                <!--android:layout_width="40sp"-->
+                <!--android:layout_height="40sp"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--android:padding="7sp"-->
+                <!--android:src="@drawable/nuev0_domicilio"/>-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/historial"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/ultra_light_white"
+                    android:textSize="@dimen/Text_Dimens_H2.5"
+                    android:layout_marginLeft="10sp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1sp"
+                    android:layout_marginBottom="10sp"
+                    android:layout_marginTop="10sp"
+                    android:background="@color/ultra_light_white"
+                    android:layout_marginRight="20sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/BT_Historial_User"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10sp">
+                <!--<ImageView-->
+                <!--android:layout_width="40sp"-->
+                <!--android:layout_height="40sp"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--android:padding="7sp"-->
+                <!--android:src="@drawable/nuev0_domicilio"/>-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/historial"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/ultra_light_white"
+                    android:textSize="@dimen/Text_Dimens_H2.5"
+                    android:layout_marginLeft="10sp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1sp"
+                    android:layout_marginBottom="10sp"
+                    android:layout_marginTop="10sp"
+                    android:background="@color/ultra_light_white"
+                    android:layout_marginRight="20sp"/>
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/BT_Cerrar_Sesion"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:padding="10sp">
                 <!--<ImageView-->
                     <!--android:layout_width="40sp"-->
@@ -168,9 +245,10 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1sp"
+                android:layout_marginBottom="10sp"
+                android:layout_marginTop="10sp"
                 android:background="@color/ultra_light_white"
-                android:layout_marginRight="20sp"
-                android:layout_marginLeft="20sp"/>
+                android:layout_marginRight="20sp"/>
         </LinearLayout>
 
     </ScrollView>

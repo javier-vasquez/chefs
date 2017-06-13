@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.SlidingPaneLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.javiervasquez.chefs.Adapters.MySlidingPanelLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/SPL_Menu"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
         <include
-            android:layout_width="300sp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             layout="@layout/content_menu"/>
         <RelativeLayout
@@ -76,5 +76,5 @@
         </RelativeLayout>
 
 
-</android.support.v4.widget.SlidingPaneLayout>
+</com.javiervasquez.chefs.Adapters.MySlidingPanelLayout>
 

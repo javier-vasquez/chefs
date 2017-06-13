@@ -83,7 +83,19 @@ public class UserSolicitudesActivasFragment extends Fragment {
                 platoHolder.getTV_Fecha_y_Hora().setText(plato.getDateAndHour());
                 platoHolder.getTV_Cantidad().setText(plato.getQuantity());
                 platoHolder.getTV_Precio().setText("$"+String.format("%,d", plato.getPrice()).replace(",","."));
-
+                platoHolder.getCV_Item().setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Fragment fragment = new PlatoDetallesFragment();
+                        Bundle b = new Bundle();
+                        b.putString("plato_id",plato.getId());
+                        fragment.setArguments(b);
+                        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                        transaction.replace(R.id.container, fragment);
+                        transaction.addToBackStack(null);
+                        transaction.commitAllowingStateLoss();
+                    }
+                });
 
                 if(plato.getState()==2) {
                     platoHolder.getBT_Comprar().setText(getString(R.string.calificar));

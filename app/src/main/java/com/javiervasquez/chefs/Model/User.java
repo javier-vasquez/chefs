@@ -18,6 +18,8 @@ public class User implements Serializable {
     private String address;
     private String school;
     private String phone;
+    private String bankAccount;
+    private String bankName;
 
     public User() {
     }
@@ -84,5 +86,21 @@ public class User implements Serializable {
 
     public String getPhone() {
         return phone;
+    }
+
+    public void setBankAccount(String bankAccount) {
+        this.bankAccount = bankAccount;
+    }
+
+    public String getBankAccount() {
+        return bankAccount;
+    }
+
+    public void setBankName(String bankName) {
+        this.bankName = bankName;
+    }
+
+    public String getBankName() {
+        return bankName;
     }
 }

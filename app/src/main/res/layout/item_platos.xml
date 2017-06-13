@@ -24,6 +24,17 @@
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
                     fresco:placeholderImage="@drawable/chefs_logo_2"/>
+                <TextView
+                    android:id="@+id/TV_Score"
+                    android:visibility="gone"
+                    android:layout_width="60sp"
+                    android:layout_height="60sp"
+                    android:text="5.0"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_margin="10sp"
+                    android:textSize="@dimen/Text_Dimens_H4"
+                    android:background="@drawable/white_purple_rounded_frame"/>
 
             </RelativeLayout>
             <LinearLayout
@@ -103,6 +114,7 @@
                     android:textColor="@color/colorPrimaryDark"
                     android:layout_margin="5sp"
                     android:background="@drawable/purple_rounded_frame"/>
+
 
             </LinearLayout>
         </LinearLayout>

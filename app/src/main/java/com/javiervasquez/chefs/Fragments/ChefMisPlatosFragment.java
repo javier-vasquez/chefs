@@ -67,7 +67,7 @@ public class ChefMisPlatosFragment extends Fragment {
 
         adapter = new FirebaseRecyclerAdapter<Plato, PlatoHolder>(Plato.class, R.layout.item_platos, PlatoHolder.class, queryRef) {
             @Override
-            public void populateViewHolder(PlatoHolder platoHolder, Plato plato, int position) {
+            public void populateViewHolder(PlatoHolder platoHolder, final Plato plato, int position) {
 
                 Uri uri = Uri.parse(plato.getUrl_img());
                 platoHolder.getIV_Foto().setImageURI(uri);
@@ -77,7 +77,19 @@ public class ChefMisPlatosFragment extends Fragment {
                 platoHolder.getTV_Fecha_y_Hora().setText(plato.getDateAndHour());
                 platoHolder.getTV_Cantidad().setText(plato.getQuantity());
                 platoHolder.getTV_Precio().setText("$"+String.format("%,d", plato.getPrice()).replace(",","."));
-
+                platoHolder.getCV_Item().setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Fragment fragment = new PlatoDetallesFragment();
+                        Bundle b = new Bundle();
+                        b.putString("plato_id",plato.getId());
+                        fragment.setArguments(b);
+                        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                        transaction.replace(R.id.container, fragment);
+                        transaction.addToBackStack(null);
+                        transaction.commitAllowingStateLoss();
+                    }
+                });
             }
         };
         recycler.setAdapter(adapter);
